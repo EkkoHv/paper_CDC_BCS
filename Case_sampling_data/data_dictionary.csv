@@ -1,0 +1,13 @@
+﻿column,definition
+sample_no,"Sample number from 1 to 18, used consistently in all field data and validation partitions"
+borehole_no,Borehole group number from 1 to 11. Samples with the same number belong to the same borehole
+initial_role,Original initial 15 training and 3 validation split
+soil_unit,Stratigraphic unit code followed by the English soil name. Original layer codes are retained
+absolute_c1_m,Coordinate in metres
+absolute_c2_m,Coordinate in metres
+absolute_c3_m,Coordinate in metres
+local_c1_m,Coordinate in metres
+local_c2_m,Coordinate in metres
+local_c3_m,Coordinate in metres
+water_content_percent,"Water content in percent, for example 33.7 means 33.7 percent"
+void_ratio,"Original dimensionless e, for example 1.106, not 11.06"
