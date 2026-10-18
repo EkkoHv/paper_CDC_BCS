@@ -10,10 +10,10 @@
 9,7,train
 10,8,train
 11,8,train
-12,9,train
-13,10,train
-14,11,train
-15,4,train
-16,6,validation
-17,2,validation
-18,7,validation
+12,6,validation
+13,2,validation
+14,7,validation
+15,9,train
+16,10,train
+17,11,train
+18,4,train

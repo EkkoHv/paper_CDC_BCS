@@ -20,20 +20,20 @@ The spreadsheets and corresponding CSV files contain the same data. Numeric cell
 
 ## 2. Field-case sampling measurements and validation partitions
 
-The field-case sampling dataset contains **18 paired measurements from 11 boreholes**. Samples are numbered **1–18** in `sample_no` throughout the data and validation files. `borehole_no` identifies the 11 borehole groups. Samples with the same borehole number belong to the same borehole.
+The field-case sampling dataset contains **18 paired measurements from 11 boreholes**. Sample numbers **1–18** in `sample_no` follow the order in manuscript Table 2 and are used throughout the case data and validation files. `borehole_no` identifies the 11 borehole groups. Samples with the same borehole number belong to the same borehole.
 
 - Coordinates are in metres. Local coordinates equal absolute coordinates minus `(3056732.92, 376863.93, 1916.66)`.
 - `water_content_percent` stores water content in percent. For example, `33.7` means 33.7%. The corresponding absolute errors are expressed in percentage points.
 - `void_ratio` stores the original dimensionless void ratio. For example, `1.106` means 1.106. No further factor of ten is needed for these distributed observations.
 - `soil_unit` gives the layer code and English soil name, such as `2-1 Clay` and `2-3 Clay with rock fragments`. The layer codes are retained.
 
-The **initial split** uses samples **1–15 for training** and **16–18 for validation**. It is listed in `Validation/initial_split.csv`.
+The **initial split** uses samples **1–11 and 15–18 for training** and **12–14 for validation**. It is listed in `Validation/initial_split.csv`.
 
-**Repeated sixfold cross validation** uses five repetitions and 30 splits in total. Each split contains 15 training samples and three validation samples. Every sample is withheld once per repetition. The split seed is `2026101504`. The partitions are recorded in `Validation/repeated_cv_30_splits.csv`. These are sample-level partitions. The MAE is calculated from the 18 held-out predictions in each repetition, then averaged across repetitions.
+**Repeated sixfold cross validation** uses five repetitions and 30 splits in total. Each split contains 15 training samples and three validation samples. Every sample is withheld once per repetition. The partitions are recorded in `Validation/repeated_cv_30_splits.csv`. These are sample-level partitions. The MAE is calculated from the 18 held-out predictions in each repetition, then averaged across repetitions.
 
 **Leave-one-borehole-out validation** has 11 folds. All observations from one borehole are withheld together in each fold. The partitions are recorded in `Validation/borehole_leave_one_out_11_splits.csv`. The overall MAE is pooled over all 18 held-out observations.
 
-In the split-list files, `training_sample_nos` and `validation_sample_nos` contain sample numbers separated by semicolons. All methods use the same recorded partitions. Reconstruction and validation settings are given in [Experimental_settings.md](Experimental_settings.md).
+In the split-list files, `training_sample_nos` and `validation_sample_nos` contain sample numbers separated by semicolons. The recorded sample lists specify the partitions and sample order used in each split. All methods use the same recorded partitions. Reconstruction and validation settings are given in [Experimental_settings.md](Experimental_settings.md).
 
 ## 3. Synthetic reference fields and generator
 

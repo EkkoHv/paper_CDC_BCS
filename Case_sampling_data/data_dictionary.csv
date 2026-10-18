@@ -1,5 +1,5 @@
 ﻿column,definition
-sample_no,"Sample number from 1 to 18, used consistently in all field data and validation partitions"
+sample_no,"Sample number 1–18 following manuscript Table 2, used in all case data and validation files"
 borehole_no,Borehole group number from 1 to 11. Samples with the same number belong to the same borehole
 initial_role,Original initial 15 training and 3 validation split
 soil_unit,Stratigraphic unit code followed by the English soil name. Original layer codes are retained
